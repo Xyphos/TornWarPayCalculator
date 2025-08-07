@@ -1,0 +1,30 @@
+{
+	// things that need to be edited with $jQuery.html()
+	'html' : [
+		'locale_PageTitle'								: "Torn War Pay Calculator",
+		'locale_LoginHeader' 							: "Torn War Pay Calculator",
+		
+		'locale_LabelApiKey' 							: "Limited API Key:",
+		'locale_InputApiKeyPlaceholder' 				: "(Copied from your Torn API settings)",
+	
+		'locale_PrivacyPolicy'							: "Privacy Policy:",
+		'locale_PrivacyPolicyExplained'					: "No data is collected or stored on the webserver.<br />Any saved data will only be stored in your {LINK_LOCAL_STORAGE}.",
+		'locale_PrivacyPolicyLinkLabelLocalStorage' 	: "Local Storage",
+	
+	],
+	
+	// =================================================
+	// things that need to be edited with $jQuery.text()
+	'text' : [
+	
+	],
+	
+	// =================================================	
+	// things that need to be edited with $jQuery.val()
+	'val' : [
+		'locale_PrivacyPolicyButtonClose'				: "Close",
+		'locale_PrivacyPolicyLabelCheckboxForever'		: "Don't show this again"
+	]
+	
+
+}

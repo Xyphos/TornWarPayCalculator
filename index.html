@@ -1,2 +1,49 @@
-<?DOCTYPE HTML>
-<HTML></HTML>
+<!doctype html>
+<html>
+	<head>
+		<title id="locale_PageTitle">{PAGE_TITLE}</title>
+		<link rel="stylesheet" href="normalize.css" />
+		<link rel="stylesheet" href="index.css" />
+		<script src="jquery-3.7.1.min.js"></script>
+		<script src="index.js"></script>
+		<meta charset="UTF-8">
+		<meta name="description" content="Torn War Pay Calculator">
+		<meta name="keywords" content="Torn, War, Pay, Calculator">
+		<meta name="author" content="Xyphos">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div id="NoJavascript">
+			<!-- not sure how to add locale support without the use of Javascript. -->
+			<h1>Javascript Required</h1>
+			Please enable Javascript in your web browser and refresh this page.
+		</div>
+		
+		<div id="LocaleSelector">
+			<!-- content dynamically generated -->
+		</div>
+		
+		<div id="PrivacyPolicy">
+			<!-- default to US English in case Javascript is disabled. I don't want anything hidden. -->
+			<div>
+				<b><span id="locale_PrivacyPolicy">{PRIVACY_POLICY}</span></b>
+				<span id="locale_PrivacyPolicyExplained">
+					{PRIVACY_POLICY_EXPLAINED}<br />
+					<a id="locale_PrivacyPolicyLinkLabelLocalStorage" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">
+						{PRIVACY_POLICY_LINK_LABEL_LOCAL_STORAGE}
+					</a>
+				</span><p />
+				<b><span id="locale_CookiePolicy">{COOKIE_POLICY}</span></b>
+				<span id="locale_CookiePolicyExplained">
+					{COOKIE_POLICY_EXPLAINED}
+				</span><p />
+			</div>
+			
+			<div>
+				<input id="locale_PrivacyPolicyButtonClose" type="button" value="{CLOSE_BUTTON}" onClick="closePrivacyPolicy();" />&nbsp;
+				<input id="locale_PrivacyPolicyCheckboxForever" type="checkbox" value="" />&nbsp;
+				<label id="locale_PrivacyPolicyLabelCheckboxForever" for="locale_PrivacyPolicyCheckboxForever">{CHECKBOX_LABEL}</label>
+			</div>
+		</div>
+	</body>
+</html>

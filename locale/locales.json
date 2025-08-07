@@ -1,0 +1,71 @@
+{
+	/* CURRENTLY SUPPORTED LOCALES
+		JSON format = locale ID : locale (as written in that language)
+	*/
+	
+	'supported': [
+		'en-US': 'English, US',
+	],
+	
+	
+	
+	
+		/* TODO, NEED TRANSLATORS
+		
+		ar-SA Arabic, Saudi Arabia
+		bn-BD Bangla, Bangladesh
+		bn-IN Bangla, India
+		cs-CZ Czech, Czech Republic
+		da-DK Danish, Denmark
+		de-AT German, Austria
+		de-CH German, Switzerland
+		de-DE German, Germany
+		el-GR Greek, Modern
+		en-AU English, Australian
+		en-CA English, Canada
+		en-GB English, Great Britain
+		en-IE English, Ireland
+		en-IN English, India
+		en-NZ English, New Zealand
+		
+		en-ZA English, South Africa
+		es-AR Spanish, Argentina
+		es-CL Spanish, Chile
+		es-CO Spanish, Colombia
+		es-ES Spanish, Castilian (as spoken in Central-Northern Spain)
+		es-MX Spanish, Mexico
+		es-US Spanish, American  (aka "Spanglish")
+		fa-IR Iranian, Iran
+		fi-FI Finnish, Finland
+		fr-BE French, Belgian 
+		fr-CA French, Canada
+		fr-CH French, Switzerland
+		fr-FR French, France 
+		he-IL Hebrew, Israel
+		hi-IN Hindi, India
+		hu-HU Hungarian, Hungary
+		id-ID Indonesian, Indonesia
+		it-CH Italian, Switzerland
+		it-IT Italian, Italy
+		ja-JP Japanese, Japan
+		ko-KR Korean, Republic of Korea
+		nl-BE Dutch, Belgian 
+		nl-NL Dutch, Netherlands
+		no-NO Norwegian, Norway
+		pl-PL Polish, Poland
+		pt-BR Portuguese, Brazil
+		pt-PT Portuguese, Portugal
+		ro-RO Romanian, Romania
+		ru-RU Russian, Russian Federation
+		sk-SK Slovak, Slovakia
+		sv-SE Swedish, Sweden
+		ta-IN Tamil, India
+		ta-LK Tamil, Sri Lankan 
+		th-TH Thai, Thailand
+		tr-TR Turkish, Turkey
+		zh-CN Chineese, Simplified
+		zh-HK Chineese, Traditional
+		zh-TW Chineese, Taiwan
+		*/
+	]
+}

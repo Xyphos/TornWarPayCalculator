@@ -1,0 +1,45 @@
+
+:root {
+	--px: 16px;
+	--background-red: #b30000;
+	--background-green: #00b300;
+	--background-blue: #0000b3;
+	--background-grey: #b3b3b3;
+}
+
+body {
+	background-color: black;
+	color: white;
+}
+
+#NoJavascript {
+	background-color: var(--background-red);
+	color: white;
+	border: 3px solid white;
+	border-radius: var(--px);
+	padding: var(--px);	
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	
+}
+
+#LocaleSelector {
+	display: none;
+	float: bottom;
+}
+
+#PrivacyPolicy {
+	background-color: var(--background-green);
+	color: white;
+	border: 3px solid #999999;
+	border-radius: var(--px);
+	padding: var(--px);
+	display: none;
+	
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
