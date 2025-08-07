@@ -38,6 +38,7 @@ $(document).ready(function() {
 		url: 'locale/locales.json',
 		async: false,
 		dataType: 'json',
+		beforeSend: function(xhr){xhr.overrideMimeType("application/json");},
 		/*
 		.forEach(([key, value]) => {
             console.log(`${key} ${value}`);
