@@ -1,8 +1,8 @@
 {
 
-	'supported': [
+	'supported': {
 		'en-US': 'English, US',
-	],
+	},
 	
 	
 	
