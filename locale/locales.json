@@ -1,8 +1,5 @@
 {
-	/* CURRENTLY SUPPORTED LOCALES
-		JSON format = locale ID : locale (as written in that language)
-	*/
-	
+
 	'supported': [
 		'en-US': 'English, US',
 	],
