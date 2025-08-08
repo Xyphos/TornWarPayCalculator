@@ -60,9 +60,7 @@ $(document).ready(function() {
 // ================================================================================================
 
 function ajaxError(xhr, status, message, clue) {
-	let msg = `ERROR: Failed to fetch JSON ${clue}\n`
-		+ status + ': ' + message
-		
+	let msg = `AJAX ERROR: Failed to fetch JSON ${clue}\n${status}: ${message}`;		
 	console.log(msg);
 	alert(msg);	
 }
