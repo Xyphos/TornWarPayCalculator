@@ -41,7 +41,7 @@ $(document).ready(function() {
 		url: 'locale/locales.json',
 		async: false,
 		dataType: 'json',
-		beforeSend: function(xhr){xhr.overrideMimeType("application/json");},
+		beforeSend: (xhr) => xhr.overrideMimeType("application/json"),
 		error: (xhr, status, message) => ajaxError(xhr, status, message),
 		success: (json) => jsonLocales(json)
 	});	
@@ -108,7 +108,7 @@ function setLocale(locale, save = true) {
 		url: `locale/${locale}.json`,
 		async: true,
 		dataType: 'json',
-		beforeSend: function(xhr){xhr.overrideMimeType("application/json");},
+		beforeSend: (xhr) => xhr.overrideMimeType("application/json"),
 		error: (xhr, status, message) => ajaxError(xhr, status, message),
 		success: (json) => localeTranslate(json)
 	});	

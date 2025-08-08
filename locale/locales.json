@@ -1,80 +1,30 @@
 {
-	"supported" : {
-		"English" : {
-			"en-AU" : "Australia",
-			"en-CA" : "Canada",
-			"en-GB" : "Great Britain",
-			"en-IE" : "Ireland",
-			"en-IN" : "India",
-			"en-NZ" : "New Zealand",
-			"en-US" : "United States",
-			"en-ZA" : "South Africa"
-		}
-		
-	}
-		
-		/* not yet supported, example samples */
-		
-		"Español" : {
-			"es-AR" : "Argentina",
-			"es-CL" : "Chile",
-			"es-CO" : "Colombia",
-			"es-ES" : "España",
-			"es-MX" : "México",
-			"es-US" : "Americano",
-		},
-		
-		"Français" : {
-			"fr-BE" : "Belge",
-			"fr-CA" : "Canada",
-			"fr-CH" : "Suisse",
-			"fr-FR" : "France"
-		}
-		
-	
-	
-	
-	
-	
-		/* TODO, NEED TRANSLATORS
-		
-		
-		ar-SA Arabic, Saudi Arabia
-		bn-BD Bangla, Bangladesh
-		bn-IN Bangla, India
-		cs-CZ Czech, Czech Republic
-		da-DK Danish, Denmark
-		de-AT German, Austria
-		de-CH German, Switzerland
-		de-DE German, Germany
-		el-GR Greek, Modern
-		fa-IR Iranian, Iran
-		fi-FI Finnish, Finland
-		he-IL Hebrew, Israel
-		hi-IN Hindi, India
-		hu-HU Hungarian, Hungary
-		id-ID Indonesian, Indonesia
-		it-CH Italian, Switzerland
-		it-IT Italian, Italy
-		ja-JP Japanese, Japan
-		ko-KR Korean, Republic of Korea
-		nl-BE Dutch, Belgian 
-		nl-NL Dutch, Netherlands
-		no-NO Norwegian, Norway
-		pl-PL Polish, Poland
-		pt-BR Portuguese, Brazil
-		pt-PT Portuguese, Portugal
-		ro-RO Romanian, Romania
-		ru-RU Russian, Russian Federation
-		sk-SK Slovak, Slovakia
-		sv-SE Swedish, Sweden
-		ta-IN Tamil, India
-		ta-LK Tamil, Sri Lankan 
-		th-TH Thai, Thailand
-		tr-TR Turkish, Turkey
-		zh-CN Chineese, Simplified
-		zh-HK Chineese, Traditional
-		zh-TW Chineese, Taiwan
-		*/
-	
+    "supported": {
+        "English": {
+            "en-AU": "Australia",
+            "en-CA": "Canada",
+            "en-GB": "Great Britain",
+            "en-IE": "Ireland",
+            "en-IN": "India",
+            "en-NZ": "New Zealand",
+            "en-US": "United States",
+            "en-ZA": "South Africa"
+        }
+    },
+    "HelpWanted-EnglishTranslators": {
+        "Español": {
+            "es-AR": "Argentina",
+            "es-CL": "Chile",
+            "es-CO": "Colombia",
+            "es-ES": "España",
+            "es-MX": "México",
+            "es-US": "Americano"
+        },
+        "Français": {
+            "fr-BE": "Belge",
+            "fr-CA": "Canada",
+            "fr-CH": "Suisse",
+            "fr-FR": "France"
+        }
+    }
 }
