@@ -89,9 +89,8 @@ function jsonLocales(json) {
 				`<img src="http://flagcdn.com/h40/${flag}.png" alt="${value}" />` +
 				`${value}</a>`
 			);
-		}); // lang.forEach
-		
-	});	// json.supported.forEach
+		}; // for key in lang		
+	});	// for lang in json.supported
 }
 
 // ================================================================================================
