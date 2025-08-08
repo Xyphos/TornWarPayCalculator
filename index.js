@@ -68,7 +68,7 @@ function ajaxError(xhr, status, message, clue) {
 // ================================================================================================
 
 function jsonLocales(json) {
-	console.log(`\n\nlocales.json\n\n{$json}`);
+	console.log('\n\nlocales.json\n' + JSON.stringify(json));
 
 	for(const lang in json.supported) {
 		
