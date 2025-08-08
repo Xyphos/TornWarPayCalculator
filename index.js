@@ -3,30 +3,33 @@
 	// Example: https://flagcdn.com/h40/us.png
 
 var savedPrefs = {
-		'locale' : 'en-US', // default
-		'apiKey' : '',
-		'payoutPercentage' : 80,
-		'roundingFactor' : 5,
+		locale : '',
+		apiKey : '',
+		payoutPercentage : 0,
+		roundingFactor : 0,
 	};
 	
 var calcData = {
 		'cached' : {
-			'preCalcId' : 0,
+			'factionID' : 0,
+			'rankedWarID' : 0,
 			'preCalcBalances' : [],
 			'postCalcBalances' : []
 		},
 	
 		'grossProfit' : 0,
-		'factionID' : 0,
-		'rankedWarID' : 0,
 		'factionA' : '',
 		'factionB' : '',
 		'totalAttacks' : 0,
 	};
 	
-var localeData = {};
-	
 var reportHTML = '';
+
+// ================================================================================================
+
+function savePreferences() {
+	localeStorage.setItem('savedPrefs', JSON.stringify(savedPrefs));
+}
 		
 // ================================================================================================
 		
@@ -39,49 +42,93 @@ $(document).ready(function() {
 		async: false,
 		dataType: 'json',
 		beforeSend: function(xhr){xhr.overrideMimeType("application/json");},
-		/*
-		.forEach(([key, value]) => {
-            console.log(`${key} ${value}`);
-		*/
-		success: function(json) {
-			json.supported.forEach(( [key, value] ) => {
-				let code = key.substr(3,2);
-				
-				$("#LocaleSelector").html().append(
-					'<span class="localeSelection" onClick="setLocale("' + key + '"); >' +
-					'<img src="http://flagcdn.com/h40/' + code.toLowerCase() + '.png" alt="' + value + '" />' +
-					value + '</span>'
-				);
-			});
-		},
-		
-		error: function(jqXHR, status, message) {
-			alert('ERROR: Failed to fetch locales\n' 
-				+ status + ': ' + message);
-		},
-		});	
+		error: (xhr, status, message) => ajaxError(xhr, status, message),
+		success: (json) => jsonLocales(json)
+	});	
 	
 	// load saved prefs from local storage, if able
 	let json = localStorage.getItem('savedPrefs');
 	if(!!json) {
 		savedPrefs = JSON.parse(json);
-		
-		// set chosen locale
-	} else {
-		// no saved prefs - default to locale selection
-		$("#LocaleSelector").show();
+		setLocale(savedPrefs.locale, false);
 	}
 	
 	
-	$('#UserInput').show(); // show the user input	
+	
 });
 
 // ================================================================================================
 
-function localeChanged() {
-	let locale = $('#localeSelector').find(":selected").val();
-	
-	$.getJSON('/locale/' + locale + '.json', (data) => {
+function ajaxError(xhr, status, message) {
+	let msg = 'ERROR: Failed to fetch locales\n' 
+		+ status + ': ' + message
 		
+	console.log(msg);
+	alert(msg);	
+}
+
+// ================================================================================================
+
+function jsonLocales(json) {
+	json.supported.forEach((lang) => {
+		
+		let locale = `locale-${lang}`;
+		
+		$("#LocaleDropdown").append(
+			'<div class="nested-dropdown">' +
+				`<a href="#">${lang}</a>` +
+				`<div id="${locale}" class="nested-dropdown-content">`
+		);
+				
+		lang.forEach( ([key, value]) => {
+			let flag = key.substr(3,2).toLowerCase();
+			
+			$(locale).append(
+				`<a href="#" onClick="setLocale('${key}');">` +
+				`<img src="http://flagcdn.com/h40/${flag}.png" alt="${value}" />` +
+				`${value}</a>`
+			);
+		}); // lang.forEach
+		
+	});	// json.supported.forEach
+}
+
+// ================================================================================================
+
+function setLocale(locale, save = true) {
+	if(save) {
+		savedPrefs.locale = locale;
+		savePreferences();
+	}
+	
+	$('#LocaleDropdown').hide();
+	setTimeout(function(){ $('#LocaleDropdown').show(); }, 100);
+	
+	$.ajax({
+		url: `locale/${locale}.json`,
+		async: true,
+		dataType: 'json',
+		beforeSend: function(xhr){xhr.overrideMimeType("application/json");},
+		error: (xhr, status, message) => ajaxError(xhr, status, message),
+		success: (json) => localeTranslate(json)
+	});	
+}
+
+// ================================================================================================
+
+function localeTranslate(json) {
+	json.html.forEach( ([key, value]) => {
+		$(key).html(value);
+	});
+	
+	json.text.forEach( ([key, value]) => {
+		$(key).text(value);
+	});
+	
+	json.val.forEach( ([key, value]) => {
+		$(key).val(value);
 	});
 }
+
+// ================================================================================================
+

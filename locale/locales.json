@@ -1,13 +1,43 @@
 {
-
-	"supported": {
-		"en-US": "English, US",
-	},
+	"supported" : {
+		"English" : {
+			"en-AU" : "Australia",
+			"en-CA" : "Canada",
+			"en-GB" : "Great Britain",
+			"en-IE" : "Ireland",
+			"en-IN" : "India",
+			"en-NZ" : "New Zealand",
+			"en-US" : "United States",
+			"en-ZA" : "South Africa"
+		}
+		
+	}
+		
+		/* not yet supported, example samples */
+		
+		"Español" : {
+			"es-AR" : "Argentina",
+			"es-CL" : "Chile",
+			"es-CO" : "Colombia",
+			"es-ES" : "España",
+			"es-MX" : "México",
+			"es-US" : "Americano",
+		},
+		
+		"Français" : {
+			"fr-BE" : "Belge",
+			"fr-CA" : "Canada",
+			"fr-CH" : "Suisse",
+			"fr-FR" : "France"
+		}
+		
+	
 	
 	
 	
 	
 		/* TODO, NEED TRANSLATORS
+		
 		
 		ar-SA Arabic, Saudi Arabia
 		bn-BD Bangla, Bangladesh
@@ -18,26 +48,8 @@
 		de-CH German, Switzerland
 		de-DE German, Germany
 		el-GR Greek, Modern
-		en-AU English, Australian
-		en-CA English, Canada
-		en-GB English, Great Britain
-		en-IE English, Ireland
-		en-IN English, India
-		en-NZ English, New Zealand
-		
-		en-ZA English, South Africa
-		es-AR Spanish, Argentina
-		es-CL Spanish, Chile
-		es-CO Spanish, Colombia
-		es-ES Spanish, Castilian (as spoken in Central-Northern Spain)
-		es-MX Spanish, Mexico
-		es-US Spanish, American  (aka "Spanglish")
 		fa-IR Iranian, Iran
 		fi-FI Finnish, Finland
-		fr-BE French, Belgian 
-		fr-CA French, Canada
-		fr-CH French, Switzerland
-		fr-FR French, France 
 		he-IL Hebrew, Israel
 		hi-IN Hindi, India
 		hu-HU Hungarian, Hungary
@@ -64,5 +76,5 @@
 		zh-HK Chineese, Traditional
 		zh-TW Chineese, Taiwan
 		*/
-	]
+	
 }
