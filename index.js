@@ -68,6 +68,8 @@ function ajaxError(xhr, status, message, clue) {
 // ================================================================================================
 
 function jsonLocales(json) {
+	console.log(`\n\nlocales.json\n\n{$json}`);
+	
 	json.supported.forEach((lang) => {
 		
 		let locale = `locale-${lang}`;
