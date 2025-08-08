@@ -60,7 +60,7 @@ $(document).ready(function() {
 // ================================================================================================
 
 function ajaxError(xhr, status, message, clue) {
-	let msg = `AJAX ERROR: Failed to fetch JSON ${clue}\n${status}: ${message}`;		
+	let msg = `AJAX ERROR: Failed to fetch ${clue}\n${status}: ${message}`;		
 	console.log(msg);
 	alert(msg);	
 }
@@ -70,7 +70,7 @@ function ajaxError(xhr, status, message, clue) {
 function jsonLocales(json) {
 	console.log(`\n\nlocales.json\n\n{$json}`);
 
-	json.supported.forEach((lang) => {
+	for(const lang in json.supported) {
 		
 		let locale = `locale-${lang}`;
 		
@@ -79,8 +79,9 @@ function jsonLocales(json) {
 				`<a href="#">${lang}</a>` +
 				`<div id="${locale}" class="nested-dropdown-content">`
 		);
-				
-		lang.forEach( ([key, value]) => {
+		
+		for(const key in lang) {
+			let value = lang[key];
 			let flag = key.substr(3,2).toLowerCase();
 			
 			$(locale).append(

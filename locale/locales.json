@@ -1,5 +1,5 @@
 {
-	"supported": [
+	"supported": 
 		"English": {
 			"en-AU": "Australia",
 			"en-CA": "Canada",
@@ -10,8 +10,8 @@
 			"en-US": "United States",
 			"en-ZA": "South Africa"
 		}
-	],
-	"HelpWanted-EnglishTranslators": [
+	},
+	"HelpWanted-EnglishTranslators": {
 		"Español": {
 			"es-AR": "Argentina",
 			"es-CL": "Chile",
@@ -26,5 +26,5 @@
 			"fr-CH": "Suisse",
 			"fr-FR": "France"
 		}
-	]
+	}
 }
