@@ -42,7 +42,7 @@ $(document).ready(function() {
 		async: false,
 		dataType: 'json',
 		beforeSend: (xhr) => xhr.overrideMimeType("application/json"),
-		error: (xhr, status, message) => ajaxError(xhr, status, message),
+		error: (xhr, status, message) => ajaxError(xhr, status, message, 'locales.json'),
 		success: (json) => jsonLocales(json)
 	});	
 	
@@ -59,8 +59,8 @@ $(document).ready(function() {
 
 // ================================================================================================
 
-function ajaxError(xhr, status, message) {
-	let msg = 'ERROR: Failed to fetch locales\n' 
+function ajaxError(xhr, status, message, clue) {
+	let msg = `ERROR: Failed to fetch JSON ${clue}\n`
 		+ status + ': ' + message
 		
 	console.log(msg);
@@ -109,7 +109,7 @@ function setLocale(locale, save = true) {
 		async: true,
 		dataType: 'json',
 		beforeSend: (xhr) => xhr.overrideMimeType("application/json"),
-		error: (xhr, status, message) => ajaxError(xhr, status, message),
+		error: (xhr, status, message) => ajaxError(xhr, status, message, `{$locale}.json`),
 		success: (json) => localeTranslate(json)
 	});	
 }
