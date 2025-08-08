@@ -90,7 +90,7 @@ function jsonLocales(json) {
 				`${value}</a>`
 			);
 		}; // for key in lang		
-	});	// for lang in json.supported
+	};	// for lang in json.supported
 }
 
 // ================================================================================================
