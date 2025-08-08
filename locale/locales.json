@@ -1,6 +1,6 @@
 {
-	"supported": 
-		"English": {
+	"supported": {
+		"English": { 
 			"en-AU": "Australia",
 			"en-CA": "Canada",
 			"en-GB": "Great Britain",
