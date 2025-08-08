@@ -53,7 +53,7 @@ $(document).ready(function() {
 		setLocale(savedPrefs.locale, false);
 	}
 	
-	
+	$("#LocaleSelector").show();
 	
 });
 
